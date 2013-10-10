@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2e010e21-d0ab-4a45-a519-21d7b79a1d8d}</ProjectGuid>
+    <ProjectGuid>{9e875871-2ebf-4d71-bfa8-cbb743f6c511}</ProjectGuid>
     <RailsProject>True</RailsProject>
     <RailsActionView>
       <Include>ActionView::Helpers::ActiveRecordHelper</Include>
@@ -35,17 +35,17 @@
     <Content Include="app\assets\stylesheets\application.css" />
     <Content Include="app\assets\stylesheets\products.css.scss" />
     <Content Include="app\assets\stylesheets\scaffolds.css.scss" />
-    <Content Include="app\controllers\Admin\products_controller.rb" />
     <Content Include="app\controllers\application_controller.rb" />
+    <Content Include="app\controllers\products_controller.rb" />
     <Content Include="app\helpers\application_helper.rb" />
     <Content Include="app\helpers\products_helper.rb" />
     <Content Include="app\models\product.rb" />
-    <Content Include="app\views\Admin\edit.html.erb" />
-    <Content Include="app\views\Admin\index.html.erb" />
-    <Content Include="app\views\Admin\new.html.erb" />
-    <Content Include="app\views\Admin\show.html.erb" />
-    <Content Include="app\views\Admin\_form.html.erb" />
     <Content Include="app\views\layouts\application.html.erb" />
+    <Content Include="app\views\products\edit.html.erb" />
+    <Content Include="app\views\products\index.html.erb" />
+    <Content Include="app\views\products\new.html.erb" />
+    <Content Include="app\views\products\show.html.erb" />
+    <Content Include="app\views\products\_form.html.erb" />
     <Content Include="config.ru" />
     <Content Include="config\application.rb" />
     <Content Include="config\boot.rb" />
@@ -63,7 +63,7 @@
     <Content Include="config\locales\en.yml" />
     <Content Include="config\routes.rb" />
     <Content Include="db\development.sqlite3" />
-    <Content Include="db\migrate\20131009133126_create_products.rb" />
+    <Content Include="db\migrate\20131010135811_create_products.rb" />
     <Content Include="db\seeds.rb" />
     <Content Include="doc\README_FOR_APP" />
     <Content Include="Gemfile" />
@@ -83,6 +83,25 @@
     <Content Include="test\test_helper.rb" />
     <Content Include="test\unit\helpers\products_helper_test.rb" />
     <Content Include="test\unit\product_test.rb" />
+    <Content Include="tmp\cache\assets\C4E\770\sprockets%252Fb8397904337990300f0e3a17b153b48f" />
+    <Content Include="tmp\cache\assets\CD7\6F0\sprockets%252Fbd3936370d0f952ada5774e2230046ed" />
+    <Content Include="tmp\cache\assets\CD8\370\sprockets%252F357970feca3ac29060c1e3861e2c0953" />
+    <Content Include="tmp\cache\assets\CF0\DA0\sprockets%252Fd7d5b37686831d37c4dd75e645f5e016" />
+    <Content Include="tmp\cache\assets\CF1\E50\sprockets%252F627ffd39f3642a2a236775d77839fac3" />
+    <Content Include="tmp\cache\assets\D13\160\sprockets%252F2ef8657a79b31e7211a624925b9add6b" />
+    <Content Include="tmp\cache\assets\D15\750\sprockets%252F4cc25a6e69224dc83fed65a4242479c5" />
+    <Content Include="tmp\cache\assets\D32\A10\sprockets%252F13fe41fee1fe35b49d145bcc06610705" />
+    <Content Include="tmp\cache\assets\D4B\EC0\sprockets%252Fb261fa987a3e88f07b352eba69495e3b" />
+    <Content Include="tmp\cache\assets\D4E\1B0\sprockets%252Ff7cbd26ba1d28d48de824f0e94586655" />
+    <Content Include="tmp\cache\assets\D5A\EA0\sprockets%252Fd771ace226fc8215a3572e0aa35bb0d6" />
+    <Content Include="tmp\cache\assets\D6A\3B0\sprockets%252F3b515606e3e089fb60ee736b6eacb3c3" />
+    <Content Include="tmp\cache\assets\D9C\4A0\sprockets%252Fc15750bf0161f2878cf9da9bb1a84ecb" />
+    <Content Include="tmp\cache\assets\DAC\340\sprockets%252F0683e079ee2a8ddfe4d13a7fecd46855" />
+    <Content Include="tmp\cache\assets\DDC\400\sprockets%252Fcffd775d018f68ce5dba1ee0d951a994" />
+    <Content Include="tmp\cache\assets\E04\890\sprockets%252F2f5173deea6c795b8fdde723bb4b63af" />
+    <Content Include="tmp\cache\assets\E19\2A0\sprockets%252F10fcfbe6ebae11a40c8eac41939a1b9a" />
+    <Content Include="tmp\cache\assets\E25\4C0\sprockets%252Fde2fd9fd11c04a582cdbbe3d84a35ae6" />
+    <Content Include="tmp\pids\server.pid" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -117,6 +136,50 @@
     <Folder Include="test\performance\" />
     <Folder Include="test\unit\" />
     <Folder Include="test\unit\helpers\" />
+    <Folder Include="tmp\" />
+    <Folder Include="tmp\cache\" />
+    <Folder Include="tmp\cache\assets\" />
+    <Folder Include="tmp\cache\assets\C4E\" />
+    <Folder Include="tmp\cache\assets\C4E\770\" />
+    <Folder Include="tmp\cache\assets\CD7\" />
+    <Folder Include="tmp\cache\assets\CD7\6F0\" />
+    <Folder Include="tmp\cache\assets\CD8\" />
+    <Folder Include="tmp\cache\assets\CD8\370\" />
+    <Folder Include="tmp\cache\assets\CF0\" />
+    <Folder Include="tmp\cache\assets\CF0\DA0\" />
+    <Folder Include="tmp\cache\assets\CF1\" />
+    <Folder Include="tmp\cache\assets\CF1\E50\" />
+    <Folder Include="tmp\cache\assets\D13\" />
+    <Folder Include="tmp\cache\assets\D13\160\" />
+    <Folder Include="tmp\cache\assets\D15\" />
+    <Folder Include="tmp\cache\assets\D15\750\" />
+    <Folder Include="tmp\cache\assets\D32\" />
+    <Folder Include="tmp\cache\assets\D32\A10\" />
+    <Folder Include="tmp\cache\assets\D4B\" />
+    <Folder Include="tmp\cache\assets\D4B\EC0\" />
+    <Folder Include="tmp\cache\assets\D4E\" />
+    <Folder Include="tmp\cache\assets\D4E\1B0\" />
+    <Folder Include="tmp\cache\assets\D5A\" />
+    <Folder Include="tmp\cache\assets\D5A\EA0\" />
+    <Folder Include="tmp\cache\assets\D6A\" />
+    <Folder Include="tmp\cache\assets\D6A\3B0\" />
+    <Folder Include="tmp\cache\assets\D9C\" />
+    <Folder Include="tmp\cache\assets\D9C\4A0\" />
+    <Folder Include="tmp\cache\assets\DAC\" />
+    <Folder Include="tmp\cache\assets\DAC\340\" />
+    <Folder Include="tmp\cache\assets\DDC\" />
+    <Folder Include="tmp\cache\assets\DDC\400\" />
+    <Folder Include="tmp\cache\assets\E04\" />
+    <Folder Include="tmp\cache\assets\E04\890\" />
+    <Folder Include="tmp\cache\assets\E19\" />
+    <Folder Include="tmp\cache\assets\E19\2A0\" />
+    <Folder Include="tmp\cache\assets\E25\" />
+    <Folder Include="tmp\cache\assets\E25\4C0\" />
+    <Folder Include="tmp\cache\sass\" />
+    <Folder Include="tmp\cache\sass\1cbc9c89556c27a834a936d22cbdef3d797d4519\" />
+    <Folder Include="tmp\pids\" />
+    <Folder Include="tmp\sessions\" />
+    <Folder Include="tmp\sockets\" />
     <Folder Include="vendor\" />
     <Folder Include="vendor\assets\" />
     <Folder Include="vendor\assets\javascripts\" />
