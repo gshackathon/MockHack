@@ -2,14 +2,14 @@
 
 one:
   Title: MyString
-  Image: MyString
+  ImageUrl: MyString
   Description: MyString
   Stock: 1
   Price: 1.5
 
 two:
   Title: MyString
-  Image: MyString
+  ImageUrl: MyString
   Description: MyString
   Stock: 1
   Price: 1.5

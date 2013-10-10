@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Image</th>
+    <th>Imageurl</th>
     <th>Description</th>
     <th>Stock</th>
     <th>Price</th>
@@ -15,17 +15,17 @@
 <% @products.each do |product| %>
   <tr>
     <td><%= product.Title %></td>
-    <td><%= product.Image %></td>
+    <td><%= product.ImageUrl %></td>
     <td><%= product.Description %></td>
     <td><%= product.Stock %></td>
     <td><%= product.Price %></td>
-    <td><%= link_to 'Show', [:admin, product] %></td>
-    <td><%= link_to 'Edit', edit_admin_product_path(product) %></td>
-    <td><%= link_to 'Destroy', [:admin, product] , method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Product', new_admin_product_path %>
+<%= link_to 'New Product', new_product_path %>

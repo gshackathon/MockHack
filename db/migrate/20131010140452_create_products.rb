@@ -1,8 +1,13 @@
 class CreateProducts < ActiveRecord::Migration
   def change
-    create_table :products do |t|
+  
+  if table_exists?( :products) 
+	drop_table :products
+	end
+	
+	create_table :products do |t|
       t.string :Title
-      t.string :Image
+      t.string :ImageUrl
       t.string :Description
       t.integer :Stock
       t.float :Price
@@ -11,3 +16,4 @@ class CreateProducts < ActiveRecord::Migration
     end
   end
 end
+
