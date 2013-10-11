@@ -1,22 +1,22 @@
 <center><h1>Listing products</h1></center>
 
-<%= link_to "Title", :sort => "Title" %>
-<%= link_to "Price", :sort => "Price" %>
-<%= link_to "Stock", :sort => "Stock" %>
+<%= link_to "title", :sort => "Title" %>
+<%= link_to "price", :sort => "Price" %>
+<%= link_to "stock", :sort => "Stock" %>
 <%= hidden_field_tag :direction, params[:direction] %>
 <%= hidden_field_tag :sort, params[:sort] %>
 
 
 <% @products.each do |product| %>
-    <h2><%= product.Title %></h2>
-    <img src="<%= product.ImageUrl %>" width="150"><br>
-    <p><%= product.Description %></p>
-    <%  if product.Stock == 0 %>
+    <h2><%= product.title %></h2>
+    <img src="<%= product.imageUrl %>" width="150"><br>
+    <p><%= product.description %></p>
+    <%  if product.stock == 0 %>
 		Out of Stock
     <%  else %>
-	    Stock Available : <%= product.Stock %>
+	    Stock Available : <%= product.stock %>
     <%  end %><br>
-    Price : <%= product.Price %><br>
+    Price : <%= product.price %><br>
 <% end %>
 
 <%= will_paginate %>

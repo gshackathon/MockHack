@@ -21,6 +21,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'carrierwave'  #Image uploader
+#gem 'rmagick'	  #Process image
 
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
