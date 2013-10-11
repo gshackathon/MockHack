@@ -12,25 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Title %><br />
-    <%= f.text_field :Title %>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :ImageUrl %><br />
-    <%= f.text_field :ImageUrl %>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :Description %><br />
-    <%= f.text_field :Description %>
+    <%= f.label :stock %><br />
+    <%= f.number_field :stock, min: 0, value: 0%>
   </div>
   <div class="field">
-    <%= f.label :Stock %><br />
-    <%= f.number_field :Stock %>
+    <%= f.label :price %><br />
+    <%= f.text_field :price, min: 0.00, value: 0.00 %>
   </div>
-  <div class="field">
-    <%= f.label :Price %><br />
-    <%= f.text_field :Price %>
-  </div>
+  <div>
+    <%= image_tag f.object.imageUrl %>
+    <br>
+  <%= f.file_field :imageUrl %></div>
   <div class="actions">
     <%= f.submit %>
   </div>
