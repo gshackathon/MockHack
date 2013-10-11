@@ -1,5 +1,7 @@
-<h1>Listing products</h1>
-
+<h1>Listing products (Admin View)</h1>
+<%
+	# We should not be using tables. 
+%>
 <% @products.each do |product| %>
     <div class='product'>
         <div class='image'><%= image_tag product.imageUrl_url %></div>

@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  helper_method :sort_column, :sort_direction
+
   # GET /products
   # GET /products.json
   def index
@@ -8,6 +10,30 @@ class ProductsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @products }
     end
+  end
+
+  def list
+    @products = Product.order(params[:sort]).paginate(:per_page => 10, page: params[:page])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @products }
+    end
+  end
+
+  def sortable(column, title = nil)
+	  title ||= column.titleize
+	  css_class = column == sort_column ? "current #{sort_direction}" : nil
+	  direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
+	  link_to title, params.merge(:sort => column, :direction => direction), {:class => css_class} 
+  end
+
+  def sort_column
+	  Product.column_names.include?(params[:sort]) ? params[:sort] : "Title"
+  end
+
+  def sort_direction
+	  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
   # GET /products/1

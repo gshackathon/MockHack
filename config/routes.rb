@@ -1,9 +1,11 @@
 MockHack::Application.routes.draw do
 	
+	root :to => 'products#list'
+
 	scope '/admin' do
 		resources :products
 	end
-	
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
