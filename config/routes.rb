@@ -1,7 +1,6 @@
 MockHack::Application.routes.draw do
 	
-	match '/allproducts' => 'products#list'
-	#root :to => 'products#list'
+	root :to => 'products#list'
 
 	scope '/admin' do
 		resources :products
