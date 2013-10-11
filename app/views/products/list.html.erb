@@ -4,16 +4,17 @@
 %>
 
 <% @products.each do |product| %>
-	<h2><%= product.Title %></h2>
-    <img src="<%= product.ImageUrl %>" height="200"><br>
+    <h2><%= product.Title %></h2>
+    <img src="<%= product.ImageUrl %>" width="150"><br>
     <p><%= product.Description %></p>
-    <%  if product.Stock <= 0 %>
+    <%  if product.Stock == 0 %>
 		Out of Stock
     <%  else %>
 	    Stock Available : <%= product.Stock %>
     <%  end %><br>
     Price : <%= product.Price %><br>
 <% end %>
-<br />
+
+<%= will_paginate %>
 
 

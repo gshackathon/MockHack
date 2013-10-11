@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def list
-    @products = Product.all
+    @products = Product.paginate(page: params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
