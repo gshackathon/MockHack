@@ -8,7 +8,7 @@ MockHack::Application.routes.draw do
 		resources :products
 	end
 
-	resources :cart, only: [:new, :create, :destroy]
+	resources :cart
 
 	post 'cart/new'
 
