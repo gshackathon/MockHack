@@ -8,6 +8,11 @@ MockHack::Application.routes.draw do
 		resources :products
 	end
 
+	resources :cart, only: [:new, :create, :destroy]
+
+	post 'cart/new'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
