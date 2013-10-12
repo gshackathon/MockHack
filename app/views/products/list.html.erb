@@ -1,8 +1,8 @@
 <center><h1>Listing products</h1></center>
 
-<%= sortable "Title", "Title" %>
-<%= sortable "Price", "Price" %>
-<%= sortable "Stock", "Stock" %>
+<%= sortable "title", "Title" %>
+<%= sortable "price", "Price" %>
+<%= sortable "stock", "Stock" %>
 
 <% @products.each do |product| %>
     <h2><%= product.title %></h2>
