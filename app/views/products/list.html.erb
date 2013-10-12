@@ -4,9 +4,16 @@
 <%= sortable "price", "Price" %>
 <%= sortable "stock", "Stock" %>
 
+
 <% @products.each do |product| %>
+  <div>
     <h2><%= product.title %></h2>
-    <%= image_tag product.imageUrl_url %><br>
+    <%= image_tag product.imageUrl_url %>
+
+    <%= link_to 'Add to cart', '', :remote => true, :id => product.id.to_s, :onclick => 'addtocart(' + product.id.to_s + ')' %>
+    <br>
+
+
     <p><%= product.description %></p>
     <%  if product.stock == 0 %>
 		Out of Stock
@@ -14,6 +21,7 @@
 	    Stock Available : <%= product.stock %>
     <%  end %><br>
     Price : <%= product.price %><br>
+    </div>
 <% end %>
 
 <%= will_paginate %>
