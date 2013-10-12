@@ -12,6 +12,7 @@
     <div id="<%= product.id.to_s %>"><%= link_to 'Add to cart', '', :remote => true, :id => "product" + product.id.to_s, :onclick => 'addtocart(' + product.id.to_s + ')' %></div>
     <br>
     <p><%= product.description %></p>
+    Category : <%= product.category %><br>
     <%  if product.stock == 0 %>
 		Out of Stock
     <%  else %>

@@ -7,6 +7,7 @@
         <div class='image'><%= image_tag product.imageUrl_url %></div>
         <div class='title'><%= product.title %></div>
         <div class='description'><%= product.description %></div>
+        <div class='stock'><b>Category:</b> <%= product.category %></div>
         <div class='stock'><b>Available:</b> <%= product.stock %></div>
         <div class='price'><b>Price:</b> <%= product.price %></div>
         <div class='action'>
@@ -18,5 +19,3 @@
 <% end %>
 
 <br />
-
-<%= link_to 'New Product', new_product_path %>

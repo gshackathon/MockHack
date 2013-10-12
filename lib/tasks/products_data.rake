@@ -4,7 +4,8 @@ namespace :db do
     Product.create!(title: "My Country My Life",
                  imageUrl: "http://www.southasiabooks.com/images/MyCountry.jpg",
                  description: "Written by L.K.Advani",
-		 price: 100,
+		            price: 100,
+                category: 'home',
                  stock: 10)
     99.times do |n|
       title = Faker::Name.name
@@ -14,6 +15,7 @@ namespace :db do
       stock = n+1
       Product.create!(title: title,
                    description: description,
+                   category: 'home',
                    imageUrl: imageurl,
                    price: price,
 		   stock: stock)
