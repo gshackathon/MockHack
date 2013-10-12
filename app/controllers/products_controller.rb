@@ -54,14 +54,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  def chart
-    @products = Product.all
-    respond_to do |format|
-      format.html # chart.html.erb
-      format.json { render json: @product }
-    end
-  end
-
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
