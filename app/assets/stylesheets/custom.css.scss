@@ -1,1 +1,16 @@
 @import "bootstrap";
+
+.current {
+	padding-right: 15px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.asc {
+	background-image: url(/assets/uparrow10x10.png);
+}
+
+.desc {
+	background-image: url(/assets/downarrow10x10.png);
+}
+

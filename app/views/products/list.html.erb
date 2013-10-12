@@ -1,11 +1,8 @@
 <center><h1>Listing products</h1></center>
 
-<%= link_to "title", :sort => "Title" %>
-<%= link_to "price", :sort => "Price" %>
-<%= link_to "stock", :sort => "Stock" %>
-<%= hidden_field_tag :direction, params[:direction] %>
-<%= hidden_field_tag :sort, params[:sort] %>
-
+<%= sortable "Title", "Title" %>
+<%= sortable "Price", "Price" %>
+<%= sortable "Stock", "Stock" %>
 
 <% @products.each do |product| %>
     <h2><%= product.title %></h2>
