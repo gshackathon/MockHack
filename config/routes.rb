@@ -1,5 +1,7 @@
 MockHack::Application.routes.draw do
 	
+  devise_for :users
+
 	root :to => 'products#list'
 
 	scope '/admin' do
