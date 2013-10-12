@@ -33,6 +33,7 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 
 gem 'chartkick'
+gem 'letsrate'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

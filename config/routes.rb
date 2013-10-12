@@ -12,6 +12,8 @@ MockHack::Application.routes.draw do
 	post 'cart/new'
   get  'products/chart'
 
+  match '/rate' => 'rater#create', :as => 'rate'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

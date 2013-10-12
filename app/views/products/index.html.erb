@@ -10,6 +10,7 @@
         <div class='stock'><b>Category:</b> <%= product.category %></div>
         <div class='stock'><b>Available:</b> <%= product.stock %></div>
         <div class='price'><b>Price:</b> <%= product.price %></div>
+        <div class='price'><b>Price:</b>Rating: <%= rating_for product, "title" %></div>
         <div class='action'>
             <div><%= link_to 'Show', product %></div>
             <div><%= link_to 'Edit', edit_product_path(product) %></div>
