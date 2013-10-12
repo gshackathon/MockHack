@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = current_user.products.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -62,7 +62,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(params[:product])
+    @product = current_user.products.new(params[:product])
 
     respond_to do |format|
       if @product.save
