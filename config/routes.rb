@@ -11,6 +11,7 @@ MockHack::Application.routes.draw do
 	resources :cart
 
 	post 'cart/new'
+  get  'products/chart'
 
 
   # The priority is based upon order of creation:

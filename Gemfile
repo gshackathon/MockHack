@@ -30,6 +30,8 @@ gem 'faker', '1.1.2'
 gem 'bootstrap-sass', '2.3.2.0'
 
 gem 'devise'
+
+gem 'chartkick'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -3,9 +3,12 @@
 <%= sortable "title", "Title" %>
 <%= sortable "price", "Price" %>
 <%= sortable "stock", "Stock" %>
+</br>
+<div>
+
 
 <% @products.each do |product| %>
-  <div>
+  <div class="span3">
     <h2><%= product.title %></h2>
     <%= image_tag product.imageUrl_url %><br>
 
@@ -21,7 +24,7 @@
     Price : <%= product.price %><br>
     </div>
 <% end %>
-
+</div>
 <%= will_paginate %>
 
 
