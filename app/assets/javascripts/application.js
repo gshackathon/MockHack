@@ -20,3 +20,33 @@ function addtocart(productid)
 	$.post('/cart/new', {product:productid});
 }
 
+function highlight(id)
+{
+ 	
+}
+
+$(document).ready(function(){
+
+	var msg = $('#notification-bar .flash');
+	if(!!msg)
+		showNotification(msg.text());
+	
+});
+
+$(document).ajaxComplete(function(event, request){
+	//type = request.getResponseHeader("X-Message-Type");
+	showNotification(request.getResponseHeader("X-Message"));
+});
+
+var showNotification = function(text)
+{
+	if(!text)
+		return;
+	
+	$('#notification-bar')
+	.attr('class', 'notify')
+	.html(text)
+	.slideDown(1000)
+	.delay(2000)
+	.fadeOut(1500);
+}

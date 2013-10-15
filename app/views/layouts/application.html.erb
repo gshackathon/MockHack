@@ -5,9 +5,17 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "highcharts.js", "chartkick" %>
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div id="notification-bar">
+	<% flash.each do |key, value| %>
+	<div class="flash <%= key %>"><%= value %></div>
+	<% end %>
+</div>
 
 <div class="container">
 

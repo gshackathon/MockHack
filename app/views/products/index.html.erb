@@ -3,7 +3,7 @@
 	# We should not be using tables. 
 %>
 <% @products.each do |product| %>
-    <div class='product'>
+    <div class='product' id='<%= product.id.to_s + '_div' %>'>
         <div class='image'><%= image_tag product.imageUrl_url %></div>
         <div class='title'><%= product.title %></div>
         <div class='description'><%= product.description %></div>
