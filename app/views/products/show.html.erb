@@ -26,6 +26,10 @@
   <%= @product.stock %>
 </p>
 
+<p class='stock'>
+  <b>Rating:</b><%= rating_for @product, "product_id" %>
+</p>
+
 <p class='price'>
   <b>Price:</b>
   <%= @product.price %>

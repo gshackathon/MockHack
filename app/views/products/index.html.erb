@@ -9,6 +9,7 @@
         <div class='description'><%= product.description %></div>
         <div class='stock'><b>Category:</b> <%= product.category %></div>
         <div class='stock'><b>Available:</b> <%= product.stock %></div>
+        <div class='stock'><b>Rate:</b> <%= rating_for product, "product_id" %></div>
         <div class='price'><b>Price:</b> <%= product.price %></div>
         <div class='action'>
             <div><%= link_to 'Show', product %></div>

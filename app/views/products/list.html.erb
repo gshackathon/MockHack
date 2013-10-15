@@ -3,25 +3,26 @@
 <%= sortable "title", "Title" %>
 <%= sortable "price", "Price" %>
 <%= sortable "stock", "Stock" %>
-</br>
+<br/>
 <div>
 
 
 <% @products.each do |product| %>
   <div class="span3">
     <h2><%= product.title %></h2>
-    <%= image_tag product.imageUrl_url %><br>
+    <%= image_tag product.imageUrl_url %><br/>
 
     <div id="<%= product.id.to_s %>"><%= link_to 'Add to cart', '', :remote => true, :id => "product" + product.id.to_s, :onclick => 'addtocart(' + product.id.to_s + ')' %></div>
-    <br>
+    <br/>
     <p><%= product.description %></p>
-    Category : <%= product.category %><br>
+    Category : <%= product.category %><br/>
     <%  if product.stock == 0 %>
 		Out of Stock
     <%  else %>
 	    Stock Available : <%= product.stock %>
-    <%  end %><br>
-    Price : <%= product.price %><br>
+    <%  end %><br/>
+    Price : <%= product.price %><br/>
+    Rating: <%= rating_for product, "product_id" %><br/>
     </div>
 <% end %>
 </div>

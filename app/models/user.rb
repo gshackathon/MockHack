@@ -58,4 +58,6 @@ class User < ActiveRecord::Base
   			end
   	end
   end
+
+  letsrate_rater
 end
