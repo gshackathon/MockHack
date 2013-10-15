@@ -19,5 +19,4 @@ class Product < ActiveRecord::Base
   def category= (value)
     write_attribute(:category, value)
   end
-  letsrate_rateable "title"
 end

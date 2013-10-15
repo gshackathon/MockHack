@@ -33,7 +33,6 @@ class User < ActiveRecord::Base
     end
 
     user
-
   end
 
 #def self.find_for_google_oauth2(auth, signed_in_resource=nil)
@@ -59,5 +58,4 @@ class User < ActiveRecord::Base
   			end
   	end
   end
-      letsrate_rater
 end
